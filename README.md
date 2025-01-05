@@ -115,6 +115,6 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 ---
 
 ## Contributors
-- **Your Name** - Developer
+- **Muhammed Ashraf Alkulaib** - Developer
 
 Feel free to contribute to this project by submitting issues or pull requests!
