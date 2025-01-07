@@ -1,16 +1,16 @@
 # Employee Management System (EMS)
 
 ## Overview
-The Employee Management System (EMS) is a Java-based application designed to manage employee records effectively. The application supports CRUD operations (Create, Read, Update, Delete) and includes file persistence for saving and loading employee data.
+The Employee Management System (EMS) is a Java-based application designed to streamline the management of employee records. It offers core CRUD functionality (Create, Read, Update, Delete) and uses file persistence to store employee data. EMS is a robust solution for small to medium-sized organizations.
 
 ---
 
 ## Features
-- **Add Employee**: Add new employees with unique IDs.
-- **List Employees**: View a list of all employees.
-- **Update Employee**: Modify details of an existing employee.
-- **Delete Employee**: Remove an employee by ID.
-- **File Persistence**: Save and load employee data to/from files using Apache POI (Excel).
+- **Add Employee**: Register new employees with unique IDs.
+- **List Employees**: Display a complete list of employees.
+- **Update Employee**: Edit details of an existing employee.
+- **Delete Employee**: Remove employees by their ID.
+- **File Persistence**: Save and load employee data seamlessly using text files and Excel sheets.
 
 ---
 
@@ -18,50 +18,47 @@ The Employee Management System (EMS) is a Java-based application designed to man
 ```
 EMS/
 ├── src/
-│   ├── com/
-│   │   ├── model/
-│   │   │   └── Employee.java
-│   │   ├── persistence/
-│   │   │   ├── EmployeeFileHandler.java
-│   │   │   ├── LoadEmployeesFromFile.java
-│   │   │   └── SaveEmployeesToFile.java
-│   │   ├── service/
-│   │   │   ├── AddEmployee.java
-│   │   │   ├── DeleteEmployee.java
-│   │   │   ├── EmployeeService.java
-│   │   │   ├── ListEmployees.java
-│   │   │   └── UpdateEmployee.java
-│   └── Main.java
-├── README.md
+│   ├── org/
+│   │   ├── EMS/
+│   │   │   ├── model/
+│   │   │   │   └── Employee.java
+│   │   │   ├── persistence/
+│   │   │   │   ├── EmployeeFileHandler.java
+│   │   │   │   ├── LoadEmployeesFromFile.java
+│   │   │   │   └── SaveEmployeesToFile.java
+│   │   │   ├── service/
+│   │   │   │   ├── AddEmployee.java
+│   │   │   │   ├── DeleteEmployee.java
+│   │   │   │   ├── EmployeeService.java
+│   │   │   │   ├── ListEmployees.java
+│   │   │   │   └── UpdateEmployee.java
+│   │   │   └── Main.java
+├── employees.txt
 ├── employees.xlsx
 ├── pom.xml
-└── .gitignore
+├── .gitignore
+└── README.md
 ```
 
 ---
 
 ## Setup
 ### Prerequisites
-- Java 22 (OpenJDK 22 or Oracle JDK 22)
+- Java 22 or later (OpenJDK or Oracle JDK)
 - Maven
-- IntelliJ IDEA or any Java IDE
+- IntelliJ IDEA or any compatible Java IDE
 
 ### Dependencies
 The project uses the following libraries:
-- Apache POI (for working with Excel files):
+- **Apache POI** (to handle Excel file operations):
   ```xml
   <dependency>
       <groupId>org.apache.poi</groupId>
       <artifactId>poi-ooxml</artifactId>
       <version>5.2.3</version>
   </dependency>
-  <dependency>
-      <groupId>org.apache.poi</groupId>
-      <artifactId>poi-ooxml-schemas</artifactId>
-      <version>4.1.2</version>
-  </dependency>
   ```
-- XMLBeans:
+- **XMLBeans** (required for Apache POI):
   ```xml
   <dependency>
       <groupId>org.apache.xmlbeans</groupId>
@@ -75,7 +72,7 @@ The project uses the following libraries:
 ## How to Run
 1. **Clone the Repository:**
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/BuAshraf/EMS-Employee-Management-System.git
    cd EMS
    ```
 
@@ -85,36 +82,39 @@ The project uses the following libraries:
    ```
 
 3. **Run the Application:**
-   - Use your IDE to run `Main.java` or execute:
+   - Use your IDE to run `Main.java`, or execute:
      ```bash
-     java -cp target/EMS-1.0-SNAPSHOT.jar com.Main
+     java -cp target/EMS-1.0-SNAPSHOT.jar org.EMS.Main
      ```
 
 4. **Test the Application:**
-   - Follow the menu prompts in the console to manage employees.
+   - Interact with the console-based menu to add, update, delete, or list employees.
 
 ---
 
 ## File Persistence
-- Employee data is saved to and loaded from `employees.xlsx`.
-- The Excel file is automatically updated when the application exits.
+- Employee data is stored in two formats:
+  - **Text File:** `employees.txt`
+  - **Excel File:** `employees.xlsx`
+- Files are automatically updated during application execution.
 
 ---
 
 ## Future Enhancements
-- Add advanced search filters for employees.
-- Integrate with a database (e.g., MySQL, PostgreSQL).
-- Implement a graphical user interface (GUI).
-- Add role-based authentication.
+- Add advanced search filters for employees (e.g., by department or salary range).
+- Replace file persistence with a database integration (e.g., MySQL, PostgreSQL).
+- Develop a graphical user interface (GUI) for enhanced usability.
+- Introduce role-based authentication and authorization.
 
 ---
 
 ## License
-This project is licensed under the MIT License. See `LICENSE` for details.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ---
 
 ## Contributors
 - **Muhammed Ashraf Alkulaib** - Developer
 
-Feel free to contribute to this project by submitting issues or pull requests!
+We welcome contributions! Feel free to open issues or submit pull requests to improve this project.
+
