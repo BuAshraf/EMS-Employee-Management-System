@@ -1,6 +1,6 @@
 #                                                                 Employee Management System (EMS) 
 
-![1](./assets/EMS_logo.jpg?raw=true "EMS_logo")
+![1](./assets/EMS_logo2.jpg?raw=true "EMS_logo")
 
 ## 📜 Overview  
 The **Employee Management System (EMS)** is a Java-based application designed to streamline the management of employee data. With features for adding, viewing, updating, and deleting employee records, it provides efficient data handling. The project also supports file persistence using Excel for data storage.  
