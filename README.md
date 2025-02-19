@@ -1,120 +1,119 @@
-# Employee Management System (EMS)
+#  <p align="center"> Employee Management System (EMS)  
+<p align="center">
+    <img src="https://github.com/BuAshraf/EMS-Employee-Management-System/blob/m/assets/EMS_logo.jpg"
+        height="400">
+</p>
+<p align="center">
+   
 
-## Overview
-The Employee Management System (EMS) is a Java-based application designed to manage employee records effectively. The application supports CRUD operations (Create, Read, Update, Delete) and includes file persistence for saving and loading employee data.
-
----
-
-## Features
-- **Add Employee**: Add new employees with unique IDs.
-- **List Employees**: View a list of all employees.
-- **Update Employee**: Modify details of an existing employee.
-- **Delete Employee**: Remove an employee by ID.
-- **File Persistence**: Save and load employee data to/from files using Apache POI (Excel).
+## 📜 Overview  
+The **Employee Management System (EMS)** is a Java-based application designed to streamline the management of employee data. With features for adding, viewing, updating, and deleting employee records, it provides efficient data handling. The project also supports file persistence using Excel for data storage.  
 
 ---
 
-## Project Structure
-```
-EMS/
-├── src/
-│   ├── com/
-│   │   ├── model/
-│   │   │   └── Employee.java
-│   │   ├── persistence/
-│   │   │   ├── EmployeeFileHandler.java
-│   │   │   ├── LoadEmployeesFromFile.java
-│   │   │   └── SaveEmployeesToFile.java
-│   │   ├── service/
-│   │   │   ├── AddEmployee.java
-│   │   │   ├── DeleteEmployee.java
-│   │   │   ├── EmployeeService.java
-│   │   │   ├── ListEmployees.java
-│   │   │   └── UpdateEmployee.java
-│   └── Main.java
-├── README.md
-├── employees.xlsx
-├── pom.xml
-└── .gitignore
-```
+## 🚀 Features  
+- Add new employees with unique IDs.  
+- View a list of all employees.  
+- Update employee details (name, department, salary).  
+- Delete employee records by ID.  
+- Save and load employee data using **Excel files**.  
+- Structured and maintainable code for easy scalability.  
 
 ---
 
-## Setup
-### Prerequisites
-- Java 22 (OpenJDK 22 or Oracle JDK 22)
-- Maven
-- IntelliJ IDEA or any Java IDE
-
-### Dependencies
-The project uses the following libraries:
-- Apache POI (for working with Excel files):
-  ```xml
-  <dependency>
-      <groupId>org.apache.poi</groupId>
-      <artifactId>poi-ooxml</artifactId>
-      <version>5.2.3</version>
-  </dependency>
-  <dependency>
-      <groupId>org.apache.poi</groupId>
-      <artifactId>poi-ooxml-schemas</artifactId>
-      <version>4.1.2</version>
-  </dependency>
-  ```
-- XMLBeans:
-  ```xml
-  <dependency>
-      <groupId>org.apache.xmlbeans</groupId>
-      <artifactId>xmlbeans</artifactId>
-      <version>5.2.2</version>
-  </dependency>
-  ```
+## 🔧 Technologies Used  
+- **Java**: Core development language.  
+- **Maven**: Build automation tool for dependency management.  
+- **Apache POI**: Library for Excel file handling.  
+- **Git & GitHub**: Version control and collaboration.  
 
 ---
 
-## How to Run
-1. **Clone the Repository:**
+## 💼 Installation & Setup  
+### Prerequisites  
+- **Java 22**: Ensure you have JDK 22 or later installed.  
+- **Maven**: To handle project dependencies.  
+- **IDE**: IntelliJ IDEA or Eclipse for Java development.  
+
+### Steps  
+1. Clone the repository:  
    ```bash
-   git clone <repository_url>
-   cd EMS
+   git clone https://github.com/BuAshraf/EMS-Employee-Management-System.git
+   cd EMS-Employee-Management-System
    ```
-
-2. **Build the Project:**
+2. Build the project using Maven:  
    ```bash
    mvn clean install
    ```
-
-3. **Run the Application:**
-   - Use your IDE to run `Main.java` or execute:
-     ```bash
-     java -cp target/EMS-1.0-SNAPSHOT.jar com.Main
-     ```
-
-4. **Test the Application:**
-   - Follow the menu prompts in the console to manage employees.
+3. Run the application:  
+   Use your IDE to execute the `Main.java` file located in `src/main/java/org/EMS/Main.java`.  
 
 ---
 
-## File Persistence
-- Employee data is saved to and loaded from `employees.xlsx`.
-- The Excel file is automatically updated when the application exits.
+## 🔍 Usage  
+1. Start the application.  
+2. Follow the menu prompts in the console to:  
+   - Add an employee.  
+   - View a list of all employees.  
+   - Update or delete employee details.  
+3. All data is saved automatically to `employees.xlsx` in the root directory.  
 
 ---
 
-## Future Enhancements
-- Add advanced search filters for employees.
-- Integrate with a database (e.g., MySQL, PostgreSQL).
-- Implement a graphical user interface (GUI).
-- Add role-based authentication.
+## 📂 Folder Structure  
+```
+EMS/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── org/
+│   │   │       ├── EMS/
+│   │   │       │   ├── Main.java
+│   │   │       │   ├── model/
+│   │   │       │   │   └── Employee.java
+│   │   │       │   ├── persistence/
+│   │   │       │   │   ├── EmployeeFileHandler.java
+│   │   │       │   │   ├── LoadEmployeesFromFile.java
+│   │   │       │   │   └── SaveEmployeesToFile.java
+│   │   │       │   ├── service/
+│   │   │       │   │   ├── AddEmployee.java
+│   │   │       │   │   ├── DeleteEmployee.java
+│   │   │       │   │   ├── EmployeeService.java
+│   │   │       │   │   ├── ListEmployees.java
+│   │   │       │   │   └── UpdateEmployee.java
+├── employees.xlsx
+├── pom.xml
+└── README.md
+```
 
 ---
 
-## License
+## 🎥 Demo  
+Provide a demo GIF or screenshots of the application in action (e.g., CRUD operations, file saving/loading).  
+
+
+---
+
+## 🌐 Acknowledgements  
+- **Apache POI Team**: For the excellent Excel handling library.  
+- **OpenJDK**: For the powerful Java platform.  
+- **GitHub**: For project hosting and collaboration.  
+
+---
+
+## ✉ License  
 This project is licensed under the MIT License. See `LICENSE` for details.
 
 ---
 
-## Contributors
-- **Muhammed Ashraf Alkulaib** - Developer
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white)![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-Feel free to contribute to this project by submitting issues or pull requests!
+---
+## 💬 Get to Know Me  😁 👨‍💻
+
+- 💼 **LinkedIn:** [Connect with me](www.linkedin.com/in/muhammed-alkulaib-773492238)
+
+- ✖ **Twitter:** [Follow me](https://twitter.com/bo_ashraf)
+
+- 📬 **Email:** [Connect with me](muhammedalmugera21@gmail.com)
+
